@@ -13,7 +13,7 @@
         android:layout_height="322dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="36dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/splash" />
 
     <EditText
         android:id="@+id/email_edittext"
@@ -31,7 +31,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:hint="Password"
-        android:inputType="text" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/login_button"

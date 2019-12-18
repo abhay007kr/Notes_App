@@ -9,15 +9,15 @@
 
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="189dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="36dp"
         android:src="@drawable/splash" />
 
     <EditText
         android:id="@+id/email_edittext"
-        android:layout_width="wrap_content"
+        android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="36dp"
@@ -26,7 +26,7 @@
 
     <EditText
         android:id="@+id/password_edittext"
-        android:layout_width="wrap_content"
+        android:layout_width="206dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
@@ -35,24 +35,22 @@
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="105dp"
+        android:layout_height="32dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:background="#1768E8"
+        android:background="#113388"
         android:text="LOGIN" />
 
     <TextView
         android:id="@+id/register_donthaveaccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account?"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Don't have an account?"
         android:textColor="#000000"
-        android:layout_marginTop="16dp" />
-
-
-
+        android:textSize="10sp" />
 
 
 </LinearLayout>

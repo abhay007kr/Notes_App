@@ -16,7 +16,7 @@
         android:src="@drawable/newlogo" />
 
     <EditText
-        android:id="@+id/email_edittext"
+        android:id="@+id/loginEmail"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -25,26 +25,26 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/password_edittext"
+        android:id="@+id/loginPass"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:hint="Password"
-        android:inputType="text" />
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/loginButton"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="26dp"
         android:background="#113388"
         android:text="LOGIN"
         android:textColor="#ffffff"/>
 
     <TextView
-        android:id="@+id/register_donthaveaccount"
+        android:id="@+id/dontHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

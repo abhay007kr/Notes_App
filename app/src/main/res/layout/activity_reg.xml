@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+
+        <EditText
+            android:id="@+id/regInName"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:hint="Name"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/regInEmail"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/regInPass"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/regButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#2623D8"
+            android:text="Register"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+</LinearLayout>
+
+
+    </LinearLayout>

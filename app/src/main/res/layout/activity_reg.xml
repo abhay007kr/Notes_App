@@ -5,51 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="36dp"
+    android:layout_marginRight="36dp"
     tools:context=".RegActivity">
 
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/regInName"
         android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:hint="Name"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/regInEmail"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/regInPass"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="24sp" />
+
+
+    <Button
+        android:id="@+id/regButton"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp" >
+        android:layout_marginTop="40dp"
+        android:background="#113388"
+        android:text="Register"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
 
-
-        <EditText
-            android:id="@+id/regInName"
-            android:layout_width="match_parent"
-            android:layout_height="88dp"
-            android:hint="Name"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/regInEmail"
-            android:layout_width="match_parent"
-            android:layout_height="82dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/regInPass"
-            android:layout_width="match_parent"
-            android:layout_height="82dp"
-            android:hint="password"
-            android:inputType="textPassword"
-            android:textSize="24sp" />
-
-
-        <Button
-            android:id="@+id/regButton"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="#113388"
-            android:text="Register"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
-
-    </LinearLayout>
 </LinearLayout>

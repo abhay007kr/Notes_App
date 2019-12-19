@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-            }
+      }
+
+    public void openRegisterActivity (View v){
+        startActivity(new Intent(MainActivity.this, RegActivity.class));
+    }
 
 }

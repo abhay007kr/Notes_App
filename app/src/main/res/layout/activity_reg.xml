@@ -34,7 +34,6 @@
         android:inputType="textPassword"
         android:textSize="24sp" />
 
-
     <Button
         android:id="@+id/regButton"
         android:layout_width="fill_parent"

@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Launcher">
+        <activity android:name=".PasswordReset" />
         <activity
             android:name=".AfterLogin"
             android:label="@string/title_activity_after_login"
-            android:theme="@style/AppTheme.Launcher.NoActionBar"></activity>
+            android:theme="@style/AppTheme.Launcher.NoActionBar" />
         <activity android:name=".RegActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

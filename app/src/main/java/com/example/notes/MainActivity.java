@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
-    private Button btnLogin, btnReset;
+    private Button btnLogin ;
+    TextView passwordReset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +46,20 @@ public class MainActivity extends AppCompatActivity {
         inputPassword = (EditText) findViewById(R.id.loginPass);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnLogin = (Button) findViewById(R.id.loginButton);
-
+        passwordReset=findViewById(R.id.passChange);
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
+
+       passwordReset.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent toPassReset = new Intent(MainActivity.this,PasswordReset.class);
+               startActivity(toPassReset);
+           }
+       });
+
+
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,10 +96,17 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(MainActivity.this, AfterLogin.class);
-                                    startActivity(intent);
-                                    finish();
-                                }
+                                    if(auth.getCurrentUser().isEmailVerified()) {
+                                        Intent intent = new Intent(MainActivity.this, AfterLogin.class);
+                                        startActivity(intent);
+                                        finish();
+
+                                    }
+                                    else{
+                                        Toast.makeText(MainActivity.this,"Please Verify your Email",Toast.LENGTH_SHORT).show();
+                                    }
+
+                                    }
                             }
                         });
 

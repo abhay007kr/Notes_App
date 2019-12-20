@@ -32,16 +32,23 @@
         android:layout_marginTop="16dp"
         android:hint="Password"
         android:inputType="textPassword" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        android:layout_gravity="right"
+        android:paddingRight="60dp"
+        android:textSize="16sp"
+        android:id="@+id/passChange"/>
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:background="#113388"
         android:text="LOGIN"
-        android:onClick="openLoginActivity"
         android:textColor="#ffffff"/>
 
     <TextView

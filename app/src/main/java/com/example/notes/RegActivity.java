@@ -67,12 +67,28 @@ public class RegActivity extends AppCompatActivity {
                         .addOnCompleteListener(RegActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(RegActivity.this, "Succesfully Registered" , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegActivity.this, "Succesfully Registered .Please Verify your Email-Address" , Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
                                 if (!task.isSuccessful()) {
                                     Toast.makeText(RegActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
+
+                                    auth.getCurrentUser().sendEmailVerification().addOnCompleteListener(RegActivity.this, new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(RegActivity.this,
+                                                        "Verification email sent to ",
+                                                        Toast.LENGTH_SHORT).show();
+                                            } else {
+                                                Toast.makeText(RegActivity.this,
+                                                        "Failed to send verification email.",
+                                                        Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
+
                                     startActivity(new Intent(RegActivity.this, MainActivity.class));
                                     finish();
                                 }

@@ -16,7 +16,7 @@
         android:src="@drawable/newlogo" />
 
     <EditText
-        android:id="@+id/email_edittext"
+        android:id="@+id/loginEmail"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -25,7 +25,7 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/password_edittext"
+        android:id="@+id/loginPass"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -34,7 +34,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/loginButton"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -45,7 +45,7 @@
         android:textColor="#ffffff"/>
 
     <TextView
-        android:id="@+id/register_donthaveaccount"
+        android:id="@+id/dontHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -54,5 +54,13 @@
         android:textColor="#000000"
         android:textStyle="bold"
         android:onClick="openRegisterActivity"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
 
 </LinearLayout>

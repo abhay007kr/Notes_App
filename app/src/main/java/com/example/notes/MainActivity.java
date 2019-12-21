@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
-        passwordReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toPassReset = new Intent(MainActivity.this,PasswordReset.class);
-                startActivity(toPassReset);
-            }
-        });
+       passwordReset.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent toPassReset = new Intent(MainActivity.this,PasswordReset.class);
+               startActivity(toPassReset);
+           }
+       });
 
 
 
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(MainActivity.this,"Please Verify your Email",Toast.LENGTH_SHORT).show();
                                     }
 
-                                }
+                                    }
                             }
                         });
 
@@ -120,4 +120,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, RegActivity.class));
     }
 
-}
+    }

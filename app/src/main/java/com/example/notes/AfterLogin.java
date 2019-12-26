@@ -118,4 +118,4 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
     @Override
     public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
     }
-} // end of class
+} // end of clas

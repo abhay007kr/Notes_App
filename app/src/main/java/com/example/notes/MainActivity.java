@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private Button btnLogin ;
     TextView passwordReset;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

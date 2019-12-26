@@ -23,7 +23,8 @@ public class RegActivity extends AppCompatActivity {
     private EditText inputName, inputEmail, inputPassword;
     private Button btnSignUp ;
     private ProgressBar progressBar;
-    private FirebaseAuth auth;          //provided by firebase for email-password Verification
+    private FirebaseAuth auth;  //provided by firebase for email-password Verification
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

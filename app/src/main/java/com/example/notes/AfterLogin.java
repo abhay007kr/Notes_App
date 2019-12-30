@@ -160,6 +160,7 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
                                 Intent toMainActivity = new Intent(AfterLogin.this,MainActivity.class);
                                 startActivity(toMainActivity);
                                 Toast.makeText(AfterLogin.this,"Succesfully logged out",Toast.LENGTH_LONG).show();
+                                    finish();
                             }
                         }).setNegativeButton("No",null).show();
             case R.id.nav_acc:

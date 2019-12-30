@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         if(auth.getCurrentUser()!=null)                               //*if user loggined then start afterActivity*//*
         {   Intent i = new Intent(MainActivity.this, AfterLogin.class);
             startActivity(i);
+            finish();
              } // end of if
 
             inputEmail = (EditText) findViewById(R.id.loginEmail);

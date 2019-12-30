@@ -5,7 +5,7 @@ import com.google.firebase.Timestamp;
 public class Note {
 
     private String text;
-    private boolean completed;
+
     private Timestamp created;
     private String userId;
 
@@ -14,7 +14,7 @@ public class Note {
 
     public Note(String text, boolean completed, Timestamp created, String userId) {
         this.text = text;
-        this.completed = completed;
+
         this.created = created;
         this.userId = userId;
     }
@@ -27,13 +27,6 @@ public class Note {
         this.text = text;
     }
 
-    public boolean getCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
-    }
 
     public Timestamp getCreated() {
         return created;
@@ -55,7 +48,6 @@ public class Note {
     public String toString() {
         return "Note{" +
                 "text='" + text + '\'' +
-                ", completed=" + completed +
                 ", created=" + created +
                 ", userId='" + userId + '\'' +
                 '}';

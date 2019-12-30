@@ -1,12 +1,15 @@
 package com.example.notes;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private Button btnLogin ;
     TextView passwordReset;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -36,12 +40,17 @@ public class MainActivity extends AppCompatActivity {
         // set the view now
         setContentView(R.layout.activity_main);
 
+
+
+
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
+        if(auth.getCurrentUser()!=null)                               //*if user loggined then start afterActivity*//*
+        {   Intent i = new Intent(MainActivity.this, AfterLogin.class);
+            startActivity(i);
+             } // end of if
 
-
-
-        inputEmail = (EditText) findViewById(R.id.loginEmail);
+            inputEmail = (EditText) findViewById(R.id.loginEmail);
         inputPassword = (EditText) findViewById(R.id.loginPass);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnLogin = (Button) findViewById(R.id.loginButton);
@@ -115,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
     public void openRegisterActivity(View v) {
         startActivity(new Intent(MainActivity.this, RegActivity.class));
     }

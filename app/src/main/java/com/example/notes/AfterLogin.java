@@ -150,7 +150,7 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.logout:
-                final TextView tv = new TextView(this); tv.setText("Are you sure you want to Log out ?" +"");
+             final TextView tv = new TextView(this); tv.setText("Are you sure you want to Log out ?" +"");
                 tv.setTextSize(20);
                 new  AlertDialog.Builder(this).setTitle("Log out").setView(tv)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -162,13 +162,16 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
                                 Toast.makeText(AfterLogin.this,"Succesfully logged out",Toast.LENGTH_LONG).show();
                                     finish();
                             }
-                        }).setNegativeButton("No",null).show();
+                        }).setNegativeButton("No",null).show(); break;
+            case R.id.exit:
+                    finishAndRemoveTask();  break;
             case R.id.nav_acc:
-
-
-            default:
+                    String uid = FirebaseAuth.getInstance().getCurrentUser().getEmail().toString();   TextView textView =new  TextView(this);
+                    textView.setTextSize(18); textView.setText("Logged in as  " + uid);
+                    new AlertDialog.Builder(this).setView(textView).setNegativeButton("OK",null).show();break;
+                default:
                 return super.onOptionsItemSelected(item);
-        } }//end of onOptionsItemSelected
+        } return false ;} //end of onOptionsItemSelected
 
                 // Handling Changes
 

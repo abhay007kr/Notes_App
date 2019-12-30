@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
@@ -35,7 +34,6 @@ public class NotesRecyclerAdapter extends FirestoreRecyclerAdapter<Note, NotesRe
     protected void onBindViewHolder(@NonNull NoteViewHolder holder, int position, @NonNull Note note) {
 
         holder.noteTextView.setText(note.getText());
-        /*holder.checkBox.setChecked(note.getCompleted());*/
         CharSequence dateCharSeq = DateFormat.format("EEEE, MMM d, yyyy h:mm:ss a", note.getCreated().toDate());
         holder.dateTextView.setText(dateCharSeq);
     }
@@ -52,7 +50,6 @@ public class NotesRecyclerAdapter extends FirestoreRecyclerAdapter<Note, NotesRe
     class NoteViewHolder extends RecyclerView.ViewHolder {
 
         TextView noteTextView, dateTextView;        ConstraintLayout parentl;
-        /*CheckBox checkBox;*/
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -81,7 +78,6 @@ public class NotesRecyclerAdapter extends FirestoreRecyclerAdapter<Note, NotesRe
     }
 
     interface NoteListener {
-        /*public void handleCheckChanged(boolean isChecked, DocumentSnapshot snapshot);*/
         public void EditNote(DocumentSnapshot snapshot);
         public void DeleteItem(DocumentSnapshot snapshot);
     }

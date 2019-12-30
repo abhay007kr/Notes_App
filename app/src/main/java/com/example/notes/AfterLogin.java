@@ -62,16 +62,7 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
                 showAlertDialog();
             }
         });
-        FloatingActionButton logOut = findViewById(R.id.logOut);
-        logOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent toMainActivity = new Intent(AfterLogin.this,MainActivity.class);
-                startActivity(toMainActivity);
-                Toast.makeText(AfterLogin.this,"Succesfully logged out",Toast.LENGTH_LONG).show();
-            }
-        });
+
     }
     @Override
     protected void onStart() {

@@ -261,4 +261,4 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
 
     }
 
-} // end of clas
+} // end of class

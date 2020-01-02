@@ -69,14 +69,14 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
         super.onStart();
         FirebaseAuth.getInstance().addAuthStateListener(this);
     }
-    @Override
+/*    @Override
     protected void onStop() {
         super.onStop();
         FirebaseAuth.getInstance().removeAuthStateListener(AfterLogin.this);
         if (notesRecyclerAdapter != null) {
             notesRecyclerAdapter.stopListening();
         }
-    }
+    }*/
     //Initialising Recycler view using query firebase
     public  void initRecyclerView(FirebaseUser user) {
         Query query = FirebaseFirestore.getInstance()
@@ -118,7 +118,7 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
     }
     private void addNote(final String text) {
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        Note note = new Note(text, false, new Timestamp(new Date()), userId);
+        Note note = new Note(text, new Timestamp(new Date()), userId);
         FirebaseFirestore.getInstance()
                 .collection("notes")
                 .add(note)

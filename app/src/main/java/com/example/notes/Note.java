@@ -12,7 +12,7 @@ public class Note {
     public Note() {
     }
 
-    public Note(String text, boolean completed, Timestamp created, String userId) {
+    public Note(String text, Timestamp created, String userId) {
         this.text = text;
 
         this.created = created;

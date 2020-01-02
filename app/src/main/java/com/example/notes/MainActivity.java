@@ -45,11 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
-        if(auth.getCurrentUser()!=null)                               //*if user loggined then start afterActivity*//*
+
+
+        /* if(auth.getCurrentUser()!=null)
         {   Intent i = new Intent(MainActivity.this, AfterLogin.class);
             startActivity(i);
             finish();
-             } // end of if
+             }*/// end of if
 
             inputEmail = (EditText) findViewById(R.id.loginEmail);
         inputPassword = (EditText) findViewById(R.id.loginPass);

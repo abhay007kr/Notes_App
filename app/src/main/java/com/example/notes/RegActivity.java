@@ -87,11 +87,13 @@ public class RegActivity extends AppCompatActivity {
                                                         "Failed to send verification email.",
                                                         Toast.LENGTH_SHORT).show();
                                             }
+
                                         }
                                     });
+                                        Intent intent = new Intent(RegActivity.this,MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
 
-                                    startActivity(new Intent(RegActivity.this, MainActivity.class));
-                                    finish();
                                 }
                             }
                         });

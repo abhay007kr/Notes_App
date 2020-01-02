@@ -209,7 +209,11 @@ public class AfterLogin extends AppCompatActivity implements FirebaseAuth.AuthSt
         final EditText editText = new EditText(this);
         editText.setText(note.getText().toString());
         editText.setSelection(note.getText().length());
+        editText.setMinLines(3);
+        Random random = new Random();
 
+        int color = Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256));
+                editText.setBackgroundColor(color);
         new AlertDialog.Builder(this)
                 .setTitle("Edit Note")
                 .setView(editText)
